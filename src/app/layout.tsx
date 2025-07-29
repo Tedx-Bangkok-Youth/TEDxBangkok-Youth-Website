@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
+import Navbar from "@components/header/Navbar";
 import "./globals.css";
 
 const kanit = Kanit({
@@ -20,9 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${kanit.variable} antialiased`}
-      >
+      <body className={`${kanit.variable}antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
