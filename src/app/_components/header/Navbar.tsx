@@ -6,7 +6,7 @@ import Hamburger from "@components/header/Hamburger";
 const Navbar = () => {
   return (
     <>
-      <nav className=" h-16 items-center justify-between px-4 py-5 text-black bg-white drop-shadow-md hidden md:flex">
+      <nav className="h-16 items-center justify-between px-4 py-5 text-black bg-white drop-shadow-md hidden md:flex sticky top-0 z-50">
         <Link href="/" className="flex items-center">
           <div className="">
             <Image src={Logo} alt="Logo" height={40} />
@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
-      <nav className="md:hidden h-16 items-center justify-between px-4 py-5 text-black bg-white drop-shadow-md flex">
+      <nav className="md:hidden h-16 items-center justify-between px-4 py-5 text-black bg-white drop-shadow-md flex sticky top-0 z-50">
         <Link href="/" className="flex items-center">
           <div className="">
             <Image src={Logo} alt="Logo" height={40} />
