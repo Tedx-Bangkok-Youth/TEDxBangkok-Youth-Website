@@ -1,14 +1,20 @@
 import React from "react";
+import HeroSection from "./Components/HeroSection";
+import SliderSection from "./Components/SliderSection";
+import MakeItYouSection from "./Components/MakeItYouSection";
+import TimelineSection from "./Components/TimelineSection";
+import MapSection from "./Components/MapSection";
+import StorySection from "./Components/StorySection";
 
 function Landing() {
   return (
     <div className="flex flex-col justify-center items-center gap-16">
-      <div className="h-screen flex flex-col justify-center items-center">Main Landing page component</div>
-      <div className="h-screen flex flex-col justify-center items-center">Slider</div>
-      <div className="h-screen flex flex-col justify-center items-center">Make it you</div>
-          <div className="h-screen flex flex-col justify-center items-center">Timeline</div>
-                 <div className="h-screen flex flex-col justify-center items-center">Map</div>
-        <div className="h-screen flex flex-col justify-center items-center">Story</div>
+      <HeroSection />
+      <SliderSection />
+      <MakeItYouSection />
+      <TimelineSection />
+      <MapSection />
+      <StorySection />
     </div>
   );
 }
