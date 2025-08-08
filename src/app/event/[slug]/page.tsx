@@ -60,10 +60,17 @@ export default function EventPage({ params }: { params: { slug: string } }) {
           <hr className="border-black border-1 mt-5 mb-5 w-[84%]" />
           <div className="flex flex-wrap gap-4">
             {event.speakers.map((speaker, index) => (
-              <PlayerCard 
+              <PlayerCard
                 key={index}
-                imageUrl={speaker.imageUrl} 
-                text={`${speaker.name} : ${speaker.fullName} ${speaker.description}`}
+                imageUrl={speaker.imageUrl}
+                text={
+                  <div>
+                    <div>{`${speaker.name} : ${speaker.fullName}`}</div>
+                    {speaker.description && (
+                      <div className="mt-1 whitespace-pre-line">{speaker.description}</div>
+                    )}
+                  </div>
+                }
               />
             ))}
           </div>

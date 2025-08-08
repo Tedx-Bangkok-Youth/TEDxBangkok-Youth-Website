@@ -2,7 +2,7 @@ import React from "react";
 
 interface PlayerCardProps {
   imageUrl: string;
-  text: string;
+  text: React.ReactNode;
   altText?: string;
 }
 
