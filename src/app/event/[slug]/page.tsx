@@ -11,8 +11,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function EventPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function EventPage({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
   const event = getEventBySlug(slug);
 
   if (!event) {
